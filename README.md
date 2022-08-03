@@ -140,7 +140,7 @@ chr1-E_484609-484617	insertion	1326.0	1	484609	1/1	1/1	1/0<br/>
 To test these scripts, please use examples of the provided input and output files.<br/>
 
 
-E. Akhunov and Y. Guo (Aug. 3, 2022).
+Y. Guo and E. Akhunov (Aug. 3, 2022).
 
 
 
