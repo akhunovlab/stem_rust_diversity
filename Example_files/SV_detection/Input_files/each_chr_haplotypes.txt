@@ -1,0 +1,1 @@
+chr1-E	chr1-F	a1_chr_1	b1_chr_1
