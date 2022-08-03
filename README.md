@@ -5,9 +5,9 @@ SV detection and genotyping based on k-mers in stem rust panel
 
 This repository includes python custom scripts we used for detecting structure variants (SVs) in stem rust panel, and downstream k-mer genotyping for insertion and deletion types of SVs .
 
-Please cite our paper “Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races” (which will be available until published).
+The codes were used in our recent study “Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races” (submitted).
 
-If you have any questions about specific codes under this repository, please contact yuanwenguo2015@gmail.com. If you have any general questions about the project or paper, please contact corresponding author at eakhunov@ksu.edu.
+If you have questions about specific codes from the stem rust diversity repository, please contact yuanwenguo2015@gmail.com. If you have questions related to the Stem Rust Diversity project, please contact eakhunov@ksu.edu.
 
 
 
