@@ -1,4 +1,4 @@
-Detection of structural variants (SVs) in stem rust by whole genome alignment and genotyping using diagnostic k-mers
+# Detection of structural variants (SVs) in stem rust by whole genome alignment and genotyping using diagnostic k-mers
 
 
 This repository includes custom python scripts used for detecting SVs in a panel of diverse Puccinia graminis f.sp. tritici isolates that cuase stem rust in wheat. The results of these analyses are soon to be pubslished (Yuanwen Guo, Bliss Betzen, Andres Salcedo, Fei He, Robert L. Bowden, John P. Fellers, Katherine W. Jordan, Alina Akhunova, Mathew N. Rouse, Les J. Szabo, Eduard Akhunov. Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races. 2022, submitted.)
