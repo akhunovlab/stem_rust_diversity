@@ -1,13 +1,9 @@
-# Stem Rust Diversity
-SV detection and genotyping based on k-mers in stem rust panel
+Detection of structural variants (SVs) in stem rust by whole genome alignment and genotyping using diagnostic k-mers
 
 
+This repository includes custom python scripts used for detecting SVs in a panel of diverse Puccinia graminis f.sp. tritici isolates that cuase stem rust in wheat. The results of these analyses are soon to be pubslished (Yuanwen Guo, Bliss Betzen, Andres Salcedo, Fei He, Robert L. Bowden, John P. Fellers, Katherine W. Jordan, Alina Akhunova, Mathew N. Rouse, Les J. Szabo, Eduard Akhunov. Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races. 2022, submitted.)
 
-This repository includes python custom scripts we used for detecting structure variants (SVs) in stem rust panel, and downstream k-mer genotyping for insertion and deletion types of SVs .
-
-The codes were used in our recent study “Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races” (submitted).
-
-If you have questions about specific codes from the stem rust diversity repository, please contact yuanwenguo2015@gmail.com. If you have questions related to the Stem Rust Diversity project, please contact eakhunov@ksu.edu.
+Questions about the code from this repository should be addressed to yuanwenguo2015@gmail.com. If you have questions related to the Stem Rust Diversity project, please contact eakhunov@ksu.edu.
 
 
 
@@ -30,30 +26,30 @@ Jellyfish2 (https://www.cbcb.umd.edu/software/jellyfish/jellyfish-manual-1.1.pdf
 
 ## SV detection 
 
-Take four haplotypes (99KS76A-E, 99KS76-F, Pgt21-A1, and Pgt21-B1) as example:<br/>
+Take four haplotypes (e.g. 99KS76A-E, 99KS76-F, Pgt21-A1, and Pgt21-B1):<br/>
 Chromosomes for 99KS76A-E are: chr1-E, chr2-E…<br/>
 Chromosomes for 99KS76A-F are: chr1-F, chr2-F…<br/>
 Chromosomes for Pgt21-A1 are: a1_chr_1, a1_chr_2…<br/>
 Chromosomes for Pgt21-B1 are: b1_chr_1, b1_chr_2…<br/>
-(Each homologous chromosome pair should be with same direction.)
+(The sequences of each homologous chromosome pair should be in same 5'-to-3' orientation)
 
-Run Mummer to get alignments first:<br/>
+Use MUMMER to align haplotypes:<br/>
+Detailed instruction for running MUMMER can be found at: https://mummer4.github.io/index.html.
 nucmer --mum -p ref_chr1-E.que_chr1-F -t 10 $ref $que
 
-Filter alignment results:<br/>
+
+Filter alignments:<br/>
 delta-filter -i 90 -r -q ref_chr1-E.que_chr1-F.delta >  ref_chr1-E.que_chr1-F.filter.delta
 
-Convert alignment to coords format:<br/>
+Convert alignments to "coords" format:<br/>
 show-coords -rc -B ref_chr1-E.que_chr1-F.filter.delta > ref_chr1-E.que_chr1-F.filter.coords
 
-(Detailed instruction about running mummer can be found at: https://mummer4.github.io/index.html)
-
-Prepare a meta file listing all homologous chromosomes comparisons in the format of:<br/>
+Prepare a meta file listing all homologous chromosome comparisons in the following format:<br/>
 chr1-E	chr1-F	a1_chr_1	b1_chr_1<br/>
 chr2-E	chr2-F	a1_chr_2	b1_chr_2<br/>
 chr3-E	chr3-F	a1_chr_3	b1_chr_3<br/>
 
-Create a directory containing all input files (alignments files and meta file), output file will be under same directory.
+Create a directory containing all input files (alignments files and a meta file). The output file will be under same directory.
 
 How to Run:<br/>
 python SV_detection.py path_to_your_directory meta_file_name reference_haplotype_name first_query_haplotype_name second_query_haplotype_name third_query_haplotype_name output_file_name_you_specified
