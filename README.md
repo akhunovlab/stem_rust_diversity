@@ -3,7 +3,7 @@
 
 This repository includes custom python scripts used for detecting SVs in a panel of diverse Puccinia graminis f.sp. tritici isolates that cuase stem rust in wheat. The results of these analyses are soon to be pubslished (Yuanwen Guo, Bliss Betzen, Andres Salcedo, Fei He, Robert L. Bowden, John P. Fellers, Katherine W. Jordan, Alina Akhunova, Mathew N. Rouse, Les J. Szabo, Eduard Akhunov. Population genomics of Puccinia graminis f.sp. tritici highlights the role of admixture in the origin of virulent wheat rust races. 2022, submitted.)
 
-Questions about the codes from this repository should be addressed to yuanwenguo2015@gmail.com. If you have general about diversity analyses in this study or mapping Sr-AvrSr genes, please contact eakhunov@ksu.edu.
+Questions about the codes from this repository should be addressed to yuanwenguo2015@gmail.com. If you have general questions about diversity analyses in this study or mapping Sr-AvrSr genes, please contact eakhunov@ksu.edu.
 
 
 
